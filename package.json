@@ -1,0 +1,17 @@
+{
+  "name": "bjoernerlweinde_core",
+  "version": "1.0.0",
+  "description": "",
+  "private": true,
+  "author": "Björn Erlwein",
+  "license": "MIT",
+  "dependencies": {
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-cssmin": "^0.1.7",
+    "gulp-less": "^3.3.0",
+    "gulp-uglify": "^2.0.1",
+    "less": "^2.7.2",
+    "rimraf": "^2.5.4"
+  }
+}

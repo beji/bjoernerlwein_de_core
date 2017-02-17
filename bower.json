@@ -1,0 +1,23 @@
+{
+  "name": "bjoernerlweinde_core",
+  "description": "",
+  "main": "",
+  "authors": [
+    "Björn Erlwein"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "normalize-css": "^5.0.0",
+    "nanoajax": "^0.4.3",
+    "vue": "~1.0.13"
+  }
+}

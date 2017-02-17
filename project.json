@@ -1,0 +1,56 @@
+{
+  "version": "1.0.0-*",
+  "buildOptions": {
+    "debugType": "portable",
+    "emitEntryPoint": true,
+    "compilerName": "fsc",
+    "compile": {
+      "includeFiles": [
+        "Settings.fs",
+        "ParseMarkdown.fs",
+        "TwilightImperium.fs",
+        "ListML.fs",
+        "ListML.Html.fs",
+        "Templates.fs",
+        "Startup.fs",
+        "Program.fs"
+      ]
+    }
+  },
+  "tools": {
+    "dotnet-compile-fsc": "1.0.0-preview2.1-*"
+  },
+  "runtimeOptions": {
+    "configProperties": {
+      "System.GC.Server": true
+    }
+  },
+  "publishOptions": {
+    "include": [
+      "web.config",
+      "wwwroot",
+	    "content"
+    ]
+  },
+  "frameworks": {
+    "netcoreapp1.1": {
+      "dependencies": {
+        "Microsoft.NETCore.App": {
+          "type": "platform",
+          "version": "1.1.0"
+        },
+        "Microsoft.FSharp.Core.netcore": "1.0.0-*",
+        "Microsoft.AspNetCore.Server.Kestrel": "1.1.0",
+        "Microsoft.AspnetCore.StaticFiles": "1.1.0",
+        "Microsoft.Extensions.Configuration.EnvironmentVariables": "1.1.0",
+        "Microsoft.Extensions.Logging": "1.1.0",
+        "Microsoft.Extensions.Logging.Console": "1.1.0",
+        "AspNetCore.Lambda": "0.1.0-alpha003",
+        "Microsoft.Extensions.Logging.Debug": "1.1.0",
+        "Markdig": "0.10.5",
+        "Newtonsoft.Json": "9.0.1",
+        "Microsoft.AspNetCore.ResponseCompression": "1.0.0"
+      }
+    }
+  }
+}

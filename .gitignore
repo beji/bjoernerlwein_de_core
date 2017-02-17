@@ -1,0 +1,7 @@
+/obj
+/bin
+/wwwroot/css/style.min.css
+/wwwroot/css/style.css
+/wwwroot/bower_components
+/wwwroot/js/script.min.js
+/node_modules
