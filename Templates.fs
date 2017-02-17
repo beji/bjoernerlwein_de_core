@@ -41,19 +41,19 @@ module Templates =
                 script ["type", "x-template"; "id", "staticpagelist-tpl"] [
                     ul [] [
                         li ["v-for" ,"page in staticpages"] [
-                            a [href "/#/staticpage/{{page.id}}"] ["{{page.title}}"]]]]
+                            a [":href", "'/#/staticpage/' + page.id"] ["{{page.title}}"]]]]
                 script ["type", "x-template"; "id", "post-tpl"] [
                     article [] [
                         h1 [] ["{{title}}"]
                         small [] ["{{date}}"]
-                        div [] ["{{{content}}}"]]]              
+                        div ["v-html", "content"] []]]              
                 script ["type", "x-template"; "id", "posts-index-tpl"] [
                     div [] [
                         article ["v-for", "post in posts"] [
                             h1 [] [
-                                a ["href", "#/post/{{post.id}}"] ["{{post.title}}"]]
+                                a [":href", "'#/post/' + post.id"] ["{{post.title}}"]]
                             small [] ["{{post.date}}"]
-                            div [] ["{{{post.content}}}"]]]]
+                            div ["v-html", "post.content"] []]]]
                 script ["type", "x-template"; "id", "ti-tpl"] [
                     div [] [
                         div ["class", "ti-anleitung"] [
