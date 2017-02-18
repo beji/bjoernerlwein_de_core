@@ -95,26 +95,3 @@ module Templates =
                     node "component" [":is", "currentView"] [""]]
                 scripts
                 vueDebugMode]]                
-
-
-    let post =
-        div ["data-ng-controller", "postsController";  "data-ng-init", "show()"] [
-            article ["id", "{{post.id}}"] [
-                h1 ["view-title", "view-title"] ["{{post.title}}"]
-                small [] ["{{toDateString(post.date)}}"]
-                div ["ng-bind-html", "to_trusted(post.content)"] [""]]]
-
-    let posts =
-        div ["data-ng-controller", "postsController";  "data-ng-init", "index()"] [
-            node "view-title" [] ["Posts"]
-            article ["id", "{{post.id}}";  "ng-repeat", "post in posts"] [
-                h1 [] [
-                    a [href "#/post/{{post.id}}"] ["{{post.title}}"]]
-                small [] ["{{toDateString(post.date)}}"]
-                div ["ng-bind-html", "to_trusted(post.content)"] [""]]]
-
-    let staticpage =
-        div ["data-ng-controller", "staticPagesController";  "data-ng-init", "show()"] [
-            article ["id", "{{page.id}}"] [
-                h1 ["view-title", "view-title"] ["{{page.title}}"]
-                div ["ng-bind-html", "to_trusted(page.content)"] [""]]]
