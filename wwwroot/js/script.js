@@ -61,7 +61,7 @@
     data: {
       staticpages: []
     },
-    ready: function() {
+    mounted: function() {
       var _this = this;
 
       if (typeof stash.staticpagelist === 'undefined') {
@@ -90,7 +90,7 @@
         posts: []
       };
     },
-    ready: function() {
+    mounted: function() {
       var _this = this;
       if (typeof stash.posts === 'undefined') {
         ajax({
@@ -131,7 +131,7 @@
         content: ''
       }
     },
-    ready: function() {
+    mounted: function() {
       var _this = this;
       if (typeof stash.posts === 'undefined') {
         ajax({
@@ -165,10 +165,11 @@
     data: function() {
       return {
         title: '',
-        content: ''
+        content: '',
+        date: ''
       }
     },
-    ready: function() {
+    mounted: function() {
       var _this = this,
         id = getId(),
         maybeStaticpage = stash.staticpages.filter(function(elem) {
@@ -214,7 +215,7 @@
         results: []
       }
     },
-    ready: function(){
+    mounted: function(){
       for (var i = 0; i < 8; i++){
         this.slots.push(i);
       }
