@@ -3,7 +3,7 @@
   "version": 2,
   "targets": {
     ".NETCoreApp,Version=v1.1": {
-      "AspNetCore.Lambda/0.1.0-alpha003": {
+      "AspNetCore.Lambda/0.1.0-alpha004": {
         "type": "package",
         "dependencies": {
           "DotLiquid": "2.0.64",
@@ -2935,12 +2935,12 @@
     }
   },
   "libraries": {
-    "AspNetCore.Lambda/0.1.0-alpha003": {
-      "sha512": "W/GS3bV5+Os86VBevm/Mygm3MdfXJhec0dN0RC/7DhumqlZZ+z4ie/TAN1NaoKi3HIvVyU+FR2SzgK2B8x0MTw==",
+    "AspNetCore.Lambda/0.1.0-alpha004": {
+      "sha512": "TnysrHEeQNopNYtkaKg1e0hFCfexnlEJoWNDf16YWXMU92L629kWz4V8l6I3P/gMei5lntSBBnTKbxwAKpHj1g==",
       "type": "package",
-      "path": "AspNetCore.Lambda/0.1.0-alpha003",
+      "path": "AspNetCore.Lambda/0.1.0-alpha004",
       "files": [
-        "AspNetCore.Lambda.0.1.0-alpha003.nupkg.sha512",
+        "AspNetCore.Lambda.0.1.0-alpha004.nupkg.sha512",
         "AspNetCore.Lambda.nuspec",
         "lib/netstandard1.6/AspNetCore.Lambda.dll"
       ]
@@ -8506,7 +8506,7 @@
   "projectFileDependencyGroups": {
     "": [],
     ".NETCoreApp,Version=v1.1": [
-      "AspNetCore.Lambda >= 0.1.0-alpha003",
+      "AspNetCore.Lambda >= 0.1.0-alpha004",
       "Markdig >= 0.10.5",
       "Microsoft.AspNetCore.ResponseCompression >= 1.0.0",
       "Microsoft.AspNetCore.Server.Kestrel >= 1.1.0",

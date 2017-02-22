@@ -31,15 +31,15 @@ module App =
 
     let webApp =
         choose [
-            route "/" >>= setBodyAsString BjoernerlweinDe.Core.Templates.page
-            route "/posts" >>= json (ParseMarkdown.getAllPosts)
-            route "/staticpages" >>= json (ParseMarkdown.getStaticPagesWithoutContent)
+            route "/" >=> setBodyAsString BjoernerlweinDe.Core.Templates.page
+            route "/posts" >=> json (ParseMarkdown.getAllPosts)
+            route "/staticpages" >=> json (ParseMarkdown.getStaticPagesWithoutContent)
             routef "/staticpage/%s" (fun id ->
                 ParseMarkdown.getAllStaticPages
                 |> List.find (fun item -> item.id = id)
                 |> json
             )
-            POST >>= route "/ti" >>= handleTiRequest() ]
+            POST >=> route "/ti" >=> handleTiRequest() ]
 
     type Startup() =
 
