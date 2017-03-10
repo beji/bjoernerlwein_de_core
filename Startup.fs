@@ -6,8 +6,8 @@ open Microsoft.AspNetCore.Http
 open Microsoft.Extensions.Logging
 open Microsoft.Extensions.Logging.Debug
 open Microsoft.Extensions.DependencyInjection
-open AspNetCore.Lambda.HttpHandlers
-open AspNetCore.Lambda.Middleware
+open Giraffe.HttpHandlers
+open Giraffe.Middleware
 open Microsoft.AspNetCore.StaticFiles
 open Microsoft.AspNetCore.ResponseCompression
 open BjoernerlweinDe.Core
@@ -56,5 +56,5 @@ module App =
                 loggerFactory.AddConsole().AddDebug() |> ignore
             else
                 loggerFactory.AddConsole() |> ignore
-            app.UseResponseCompression().UseStaticFiles().UseLambda(webApp)
+            app.UseResponseCompression().UseStaticFiles().UseGiraffe(webApp)
             

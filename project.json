@@ -39,17 +39,17 @@
           "type": "platform",
           "version": "1.1.0"
         },
-        "Microsoft.FSharp.Core.netcore": "1.0.0-*",
+        "Microsoft.FSharp.Core.netcore": "1.0.0-rc-170122",
         "Microsoft.AspNetCore.Server.Kestrel": "1.1.0",
         "Microsoft.AspnetCore.StaticFiles": "1.1.0",
-        "Microsoft.Extensions.Configuration.EnvironmentVariables": "1.1.0",
-        "Microsoft.Extensions.Logging": "1.1.0",
-        "Microsoft.Extensions.Logging.Console": "1.1.0",
-        "AspNetCore.Lambda": "0.1.0-alpha004",
-        "Microsoft.Extensions.Logging.Debug": "1.1.0",
-        "Markdig": "0.10.5",
+        "Microsoft.Extensions.Configuration.EnvironmentVariables": "1.1.1",
+        "Microsoft.Extensions.Logging": "1.1.1",
+        "Microsoft.Extensions.Logging.Console": "1.1.1",
+        "Giraffe": "0.1.0-alpha006",
+        "Microsoft.Extensions.Logging.Debug": "1.1.1",
+        "Markdig": "0.10.6",
         "Newtonsoft.Json": "9.0.1",
-        "Microsoft.AspNetCore.ResponseCompression": "1.0.0"
+        "Microsoft.AspNetCore.ResponseCompression": "1.0.1"
       }
     }
   }
