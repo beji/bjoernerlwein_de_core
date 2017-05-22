@@ -38,7 +38,7 @@ module ParseMarkdown =
     type Content = {title : string; content : string; id: string; date : string}
 
     let getAllFiles path =
-        let dir = new DirectoryInfo(path)
+        let dir = DirectoryInfo(path)
 
         match dir.Exists with
         | true ->

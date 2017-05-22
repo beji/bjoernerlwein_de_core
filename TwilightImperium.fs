@@ -13,7 +13,7 @@ module TwilightImperium =
         |> Array.sort
 
     let KnuthShuffle (lst : array<'a>) =
-        let rnd = new Random()
+        let rnd = Random()
         let swap i j =                                                  // Standard swap
             let item = lst.[i]
             lst.[i] <- lst.[j]
