@@ -16,16 +16,16 @@ open Newtonsoft.Json
 module App =
 
     let handleTiRequest () =
-        fun (handlercontext:  HttpHandlerContext) ->
+        fun (ctx:  HttpContext) ->
             async {
-                let form = handlercontext.HttpContext.Request.Form
+                let form = ctx.Request.Form
                 let success, players = form.TryGetValue("players")
 
                 if success then
                     let races = TwilightImperium.getRacesForPlayers (string players) TwilightImperium.races
-                    return! json races handlercontext
+                    return! json races ctx
                 else
-                    return! setStatusCode 404 handlercontext
+                    return! setStatusCode 404 ctx
             }
         
 
