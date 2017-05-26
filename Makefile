@@ -1,34 +1,40 @@
-WEBROOT=./wwwroot
-NODEPATH=./node_modules/.bin
+WEBROOT := ./wwwroot
+NODEPATH :=./node_modules/.bin
 
-.PHONY: all
-all:
-	make clean
-	make less
-	make min
+SCRIPTJS :=$(WEBROOT)/js/script.js
+SCRIPTMINJS :=$(WEBROOT)/js/script.min.js
 
-.PHONY: clean
+STYLELESS :=$(WEBROOT)/css/style.less
+STYLECSS :=$(WEBROOT)/css/style.css
+STYLEMINCSS :=$(WEBROOT)/css/style.min.css
+
+.PHONY: all clean npm bower bootstrap
+
+all:  $(STYLECSS) $(STYLEMINCSS) $(SCRIPTMINJS)
+
 clean:
-	rm -f $(WEBROOT)/js/script.min.js
+	rm -f $(SCRIPTMINJS)
 	rm -f $(WEBROOT)/css/style.min.css
 	rm -f $(WEBROOT)/css/style.css
 
-.PHONY: min
-min:
-	$(NODEPATH)/uglifyjs --compress --mangle -o $(WEBROOT)/js/script.min.js -- \
+npm:
+	npm install
+
+bower: 
+	$(NODEPATH)/bower install
+
+bootstrap: npm bower all
+
+$(SCRIPTMINJS): $(SCRIPTJS)
+	$(NODEPATH)/uglifyjs --compress --mangle -o $(SCRIPTMINJS) -- \
 		$(WEBROOT)/bower_components/nanoajax/nanoajax.min.js \
 		$(WEBROOT)/bower_components/vue/dist/vue.js \
-		$(WEBROOT)/js/script.js
-	$(NODEPATH)/cleancss -o $(WEBROOT)/css/style.min.css \
+		$(SCRIPTJS)
+
+$(STYLECSS): $(STYLELESS)
+	$(NODEPATH)/lessc $(STYLELESS) $(STYLECSS)
+
+$(STYLEMINCSS): $(STYLECSS)
+	$(NODEPATH)/cleancss -o $(STYLEMINCSS) \
 		$(WEBROOT)/bower_components/normalize-css/normalize.css \
-		$(WEBROOT)/css/style.css
-
-.PHONY: less
-less:
-	$(NODEPATH)/lessc $(WEBROOT)/css/style.less $(WEBROOT)/css/style.css
-
-.PHONY: bootstrap
-bootstrap:
-	npm install
-	$(NODEPATH)/bower install
-	make all
+		$(STYLECSS)
