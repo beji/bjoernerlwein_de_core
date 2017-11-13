@@ -22,6 +22,7 @@
   <ItemGroup>
     <None Include="web.config" CopyToOutputDirectory="PreserveNewest" CopyToPublishDirectory="PreserveNewest" />
     <Content Include="content\**\*" CopyToPublishDirectory="PreserveNewest" />
+    <Content Include="wwwroot\bower_components\**\*" CopyToPublishDirectory="PreserveNewest" />
   </ItemGroup>
   <Import Project=".paket\Paket.Restore.targets" />
 </Project>
