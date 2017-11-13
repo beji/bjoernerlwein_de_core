@@ -5,3 +5,5 @@
 /wwwroot/bower_components
 /wwwroot/js/script.min.js
 /node_modules
+/packages
+/paket-files

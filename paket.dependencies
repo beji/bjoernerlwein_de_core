@@ -1,0 +1,13 @@
+source https://www.nuget.org/api/v2
+nuget Microsoft.AspNetCore.Server.Kestrel ~> 2.0
+nuget Microsoft.AspnetCore.StaticFiles ~> 2.0
+nuget Microsoft.Extensions.Configuration.EnvironmentVariables ~> 2.0
+nuget Microsoft.Extensions.Logging ~> 2.0
+nuget Microsoft.Extensions.Logging.Console ~> 2.0
+nuget Giraffe ~> 0.1.0-beta"
+nuget Microsoft.Extensions.Logging.Debug ~> 2.0
+nuget Markdig ~> 0.13
+nuget Newtonsoft.Json ~> 10.0
+nuget Microsoft.AspNetCore.ResponseCompression ~> 2.0
+nuget System.Text.Encoding ~> 4.3
+nuget Microsoft.Extensions.DependencyInjection ~> 2.0

@@ -7,6 +7,7 @@ open Microsoft.Extensions.Logging
 open Microsoft.Extensions.Logging.Debug
 open Microsoft.Extensions.DependencyInjection
 open Giraffe.HttpHandlers
+open Giraffe.Tasks
 open Giraffe.Middleware
 open Microsoft.AspNetCore.StaticFiles
 open Microsoft.AspNetCore.ResponseCompression
@@ -16,16 +17,16 @@ open Newtonsoft.Json
 module App =
 
     let handleTiRequest () =
-        fun (ctx:  HttpContext) ->
-            async {
+        fun (next: HttpFunc) (ctx:  HttpContext) ->
+            task {
                 let form = ctx.Request.Form
                 let success, players = form.TryGetValue("players")
 
                 if success then
                     let races = TwilightImperium.getRacesForPlayers (string players) TwilightImperium.races
-                    return! json races ctx
+                    return! json races next ctx
                 else
-                    return! setStatusCode 404 ctx
+                    return! setStatusCode 404 next ctx
             }
         
 

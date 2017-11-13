@@ -1,0 +1,12 @@
+Microsoft.AspNetCore.Server.Kestrel
+Microsoft.AspnetCore.StaticFiles
+Microsoft.Extensions.Configuration.EnvironmentVariables
+Microsoft.Extensions.Logging
+Microsoft.Extensions.Logging.Console
+Giraffe
+Microsoft.Extensions.Logging.Debug
+Markdig
+Newtonsoft.Json
+Microsoft.AspNetCore.ResponseCompression
+System.Text.Encoding
+Microsoft.Extensions.DependencyInjection

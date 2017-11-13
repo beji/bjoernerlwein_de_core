@@ -2,6 +2,7 @@
 
 open System
 open System.IO
+open System.Text
 open Microsoft.AspNetCore.Hosting
 open BjoernerlweinDe.Core
 open BjoernerlweinDe.Core.App
