@@ -1,4 +1,5 @@
 source https://www.nuget.org/api/v2
+framework: netcoreapp2.0
 nuget Microsoft.AspNetCore.Server.Kestrel ~> 2.0
 nuget Microsoft.AspnetCore.StaticFiles ~> 2.0
 nuget Microsoft.Extensions.Configuration.EnvironmentVariables ~> 2.0
