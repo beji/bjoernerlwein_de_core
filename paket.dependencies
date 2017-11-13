@@ -4,7 +4,7 @@ nuget Microsoft.AspnetCore.StaticFiles ~> 2.0
 nuget Microsoft.Extensions.Configuration.EnvironmentVariables ~> 2.0
 nuget Microsoft.Extensions.Logging ~> 2.0
 nuget Microsoft.Extensions.Logging.Console ~> 2.0
-nuget Giraffe ~> 0.1.0-beta"
+nuget Giraffe ~> 0.1.0-beta
 nuget Microsoft.Extensions.Logging.Debug ~> 2.0
 nuget Markdig ~> 0.13
 nuget Newtonsoft.Json ~> 10.0
